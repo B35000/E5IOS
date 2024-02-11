@@ -33,7 +33,7 @@
                                     <constraint firstItem="2Vb-xI-ZGo" firstAttribute="centerY" secondItem="OR3-s0-dyU" secondAttribute="centerY" id="khQ-cI-4Y2"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AhW-cB-ufZ">
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AhW-cB-ufZ">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gvs-Rz-Zrf">

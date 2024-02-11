@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         let urlRequest = URLRequest(url: url!)
         webView.load(urlRequest)
         
-        webViewContainer.isHidden = true
+        webViewContainer.alpha = 0
         
         webView.addObserver(self, forKeyPath: #keyPath(WKWebView.estimatedProgress), options: .new, context: nil)
     }
@@ -29,8 +29,17 @@ class ViewController: UIViewController {
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if keyPath == "estimatedProgress" {
             if(Float(webView.estimatedProgress) == 1.0){
-                webViewContainer.isHidden = false
+                sleep(1)
+//                webViewContainer.isHidden = false
+                animate_webview_container()
             }
+        }
+    }
+    
+    
+    func animate_webview_container(){
+        UIView.animate(withDuration: 0.5) {
+            self.webViewContainer.alpha = 1.0
         }
     }
     
