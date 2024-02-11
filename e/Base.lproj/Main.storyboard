@@ -36,8 +36,8 @@
                             <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AhW-cB-ufZ">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
-                                    <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gvs-Rz-Zrf">
-                                        <rect key="frame" x="0.0" y="52" width="414" height="802"/>
+                                    <wkWebView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gvs-Rz-Zrf">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                         <color key="backgroundColor" name="mainColor"/>
                                         <color key="tintColor" name="mainColor"/>
                                         <wkWebViewConfiguration key="configuration">
@@ -49,9 +49,9 @@
                                 <color key="backgroundColor" name="mainColor"/>
                                 <constraints>
                                     <constraint firstItem="gvs-Rz-Zrf" firstAttribute="leading" secondItem="AhW-cB-ufZ" secondAttribute="leading" id="8zR-YA-zLS"/>
-                                    <constraint firstItem="gvs-Rz-Zrf" firstAttribute="top" secondItem="AhW-cB-ufZ" secondAttribute="top" constant="52" id="LYF-MH-rdK"/>
                                     <constraint firstAttribute="trailing" secondItem="gvs-Rz-Zrf" secondAttribute="trailing" id="SuC-ip-oec"/>
-                                    <constraint firstAttribute="bottom" secondItem="gvs-Rz-Zrf" secondAttribute="bottom" constant="42" id="v24-ky-1HF"/>
+                                    <constraint firstAttribute="bottom" secondItem="gvs-Rz-Zrf" secondAttribute="bottom" id="g17-j7-62K"/>
+                                    <constraint firstItem="gvs-Rz-Zrf" firstAttribute="top" secondItem="AhW-cB-ufZ" secondAttribute="top" id="pjF-aP-P7S"/>
                                 </constraints>
                             </view>
                         </subviews>

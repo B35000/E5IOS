@@ -23,6 +23,18 @@ class ViewController: UIViewController {
         webViewContainer.alpha = 0
         
         webView.addObserver(self, forKeyPath: #keyPath(WKWebView.estimatedProgress), options: .new, context: nil)
+        
+        let source: String = "var meta = document.createElement('meta');" +
+            "meta.name = 'viewport';" +
+            "meta.content = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no';" +
+            "var head = document.getElementsByTagName('head')[0];" +
+            "head.appendChild(meta);"
+        
+        let script: WKUserScript = WKUserScript(source: source, injectionTime: .atDocumentEnd, forMainFrameOnly: true)
+        
+        webView.configuration.userContentController.addUserScript(script)
+        
+        webView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: 0).isActive = true
     }
     
     
